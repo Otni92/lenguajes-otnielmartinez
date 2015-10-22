@@ -51,6 +51,18 @@ public class PersistenciaUsuarios {
                            u3.setPassword(null);
          usuarios.add(u3);
          
+          Direccion d4=new Direccion();
+                    d4.setCalle("Sur 22");
+                    d4.setColonia("San Pedro");
+                    d4.setCp(50090);
+                    d4.setMunicipio("Acolman");
+                    
+           Usuario u4=new Usuario();
+                   u4.setDireccion(d4);
+                   u4.setLogin("panfilo");
+                   u4.setPassword("nose");
+            usuarios.add(u4);       
+         
                   
         return usuarios;
 }

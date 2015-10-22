@@ -14,5 +14,15 @@ public class ProbarColecciones {
         PersistenciaUsuarios p=new PersistenciaUsuarios();
         System.out.println(p.obtenerUsuario().size());
              
+         int []algo={1,34,22,-40};
+         for(int i:algo){
+             System.out.println(i);
+         }
+         
+         for(Usuario u: p.obtenerUsuario()){
+System.out.println("El login es "+u.getLogin()+" y vive en la calle "+u.getDireccion().getCalle());
+             
+             
+         }
     }
 }
