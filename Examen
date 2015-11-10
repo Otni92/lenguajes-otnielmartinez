@@ -1,0 +1,210 @@
+
+/*  
+ 2  + * To change this license header, choose License Headers in Project Properties.  
+ 3  + * To change this template file, choose Tools | Templates  
+ 4  + * and open the template in the editor.  
+ 5  + */  
+ 6  +package EXAMEN;  
+ 7  +import java.io.Serializable;  
+ 8  +/**  
+ 9  + *  
+ 10  + * @author otniel martinez casañas 
+ 11  + */  
+ 12  +public class Departamento {  
+ 13  +      
+ 14  +private String nombre;  
+ 15  +     
+ 16  +    public Departamento(String nombre){  
+ 17  +        this.nombre = nombre;  
+ 18  +    }  
+ 19  +  
+ 20  +    public String getNombre() {  
+ 21  +        return nombre;  
+ 22  +    }  
+ 23  +  
+ 24  +    public void setNombre(String nombre) {  
+ 25  +        this.nombre = nombre;  
+ 26  +    }  
+ 27  +      
+ 28  +}  
+ 
+
+
+ ViewView the whole file at version 4cd234e  
+
+68 68 additions & 0 deletions lemguajes-140915/src/EXAMEN/Empleado.java  
+
+
+... ... @@ -0,0 +1,68 @@ 
+ 1  +/*  
+ 2  + * To change this license header, choose License Headers in Project Properties.  
+ 3  + * To change this template file, choose Tools | Templates  
+ 4  + * and open the template in the editor.  
+ 5  + */  
+ 6  +package EXAMEN;  
+ 7  +import java.io.Serializable;  
+ 8  +/**  
+ 9  + *  
+ 10  + * @
+ 11  + */  
+ 12  +public class Empleado {  
+ 13  +     private String nombre;  
+ 14  +    private String paterno;  
+ 15  +    private long seguroSocial;  
+ 16  +    private float sueldoBase;  
+ 17  +    private int horasExtras;  
+ 18  +      
+ 19  +    public Empleado(String nombre, String paterno, long seguroSocial, float sueldoBase, int horasExtras){;  
+ 20  +    this.nombre=nombre;  
+ 21  +    this.paterno=paterno;  
+ 22  +    this.seguroSocial=seguroSocial;  
+ 23  +    this.sueldoBase=sueldoBase;  
+ 24  +    this.horasExtras=horasExtras;  
+ 25  +}  
+ 26  +  
+ 27  +    public String getNombre() {  
+ 28  +        return nombre;  
+ 29  +    }  
+ 30  +  
+ 31  +    public void setNombre(String nombre) {  
+ 32  +        this.nombre = nombre;  
+ 33  +    }  
+ 34  +  
+ 35  +    public String getPaterno() {  
+ 36  +        return paterno;  
+ 37  +    }  
+ 38  +  
+ 39  +    public void setPaterno(String paterno) {  
+ 40  +        this.paterno = paterno;  
+ 41  +    }  
+ 42  +  
+ 43  +    public long getSeguroSocial() {  
+ 44  +        return seguroSocial;  
+ 45  +    }  
+ 46  +  
+ 47  +    public void setSeguroSocial(long seguroSocial) {  
+ 48  +        this.seguroSocial = seguroSocial;  
+ 49  +    }  
+ 50  +  
+ 51  +    public float getSueldoBase() {  
+ 52  +        return sueldoBase;  
+ 53  +    }  
+ 54  +  
+ 55  +    public void setSueldoBase(float sueldoBase) {  
+ 56  +        this.sueldoBase = sueldoBase;  
+ 57  +    }  
+ 58  +  
+ 59  +    public int getHorasExtras() {  
+ 60  +        return horasExtras;  
+ 61  +    }  
+ 62  +  
+ 63  +    public void setHorasExtras(int horasExtras) {  
+ 64  +        this.horasExtras = horasExtras;  
+ 65  +    }  
+ 66  +}  
+ 67  +      
+ 68  +  
+ 
+
+
+ ViewView the whole file at version 4cd234e  
+
+40 40 additions & 0 deletions lemguajes-140915/src/EXAMEN/Nomina.java  
+
+
+... ... @@ -0,0 +1,40 @@ 
+ 1  +/*  
+ 2  + * To change this license header, choose License Headers in Project Properties.  
+ 3  + * To change this template file, choose Tools | Templates  
+ 4  + * and open the template in the editor.  
+ 5  + */  
+ 6  +package EXAMEN;  
+ 7  +import java.io.Serializable;  
+ 8  +/**  
+ 9  + *  
+ 10  + * @
+ 11  + */  
+ 12  +public class Nomina {  
+ 13  +      
+ 14  +private Empleado empleado;  
+ 15  +    private Departamento departamento;  
+ 16  +  
+ 17  +    public Nomina() {  
+ 18  +    }  
+ 19  +      
+ 20  +    public Nomina(Empleado empleado, Departamento departamento){  
+ 21  +        this.empleado=empleado;  
+ 22  +        this.departamento=departamento;  
+ 23  +    }  
+ 24  +  
+ 25  +    public Empleado getEmpleado() {  
+ 26  +        return empleado;  
+ 27  +    }  
+ 28  +  
+ 29  +    public void setEmpleado(Empleado empleado) {  
+ 30  +        this.empleado = empleado;  
+ 31  +    }  
+ 32  +  
+ 33  +    public Departamento getDepartamento() {  
+ 34  +        return departamento;  
+ 35  +    }  
+ 36  +  
+ 37  +    public void setDepartamento(Departamento departamento) {  
+ 38  +        this.departamento = departamento;  
+ 39  +    }  
+ 40  +}  
+ 
+
+
+ ViewView the whole file at version 4cd234e  
+
+48 48 additions & 0 deletions lemguajes-140915/src/EXAMEN/PersistenciaNominas.java  
+
+
+... ... @@ -0,0 +1,48 @@ 
+ 1  +/*  
+ 2  + * To change this license header, choose License Headers in Project Properties.  
+ 3  + * To change this template file, choose Tools | Templates  
+ 4  + * and open the template in the editor.  
+ 5  + */  
+ 6  +package EXAMEN;  
+ 7  +import java.io.*;  
+ 8  +import java.util.ArrayList;  
+ 9  +/**  
+ 10  + *  
+ 11  + * 
+ 12  + */  
+ 13  +public class PersistenciaNominas {  
+ 14  +      
+ 15  +    ArrayList<Nomina> nominas;  
+ 16  +      
+ 17  +    public PersistenciaNominas(){  
+ 18  +        nominas=new ArrayList<Nomina>();  
+ 19  +                  
+ 20  +    }  
+ 21  +    public void guardar(Nomina nomina) throws Exception{  
+ 22  +        File file=new File("nominas");  
+ 23  +       if(file.exists()) nominas =  leeTodo();  
+ 24  +       FileOutputStream fos=new FileOutputStream(file);  
+ 25  +       ObjectOutputStream oos=new ObjectOutputStream(fos);  
+ 26  +       nominas.add(nomina);  
+ 27  +       oos.writeObject(oos);  
+ 28  +       oos.close();  
+ 29  +         
+ 30  +}  
+ 31  +    public ArrayList<Nomina> leeTodo()throws Exception{  
+ 32  +        File file=new File ("nominas");  
+ 33  +                FileInputStream fis=new FileInputStream(file);  
+ 34  +                ObjectInputStream ois=new ObjectInputStream(fis);  
+ 35  +                nominas = (ArrayList<Nomina>)ois.readObject();  
+ 36  +                return nominas;  
+ 37  +                  
+ 38  +    }  
+ 39  +    public Nomina buscarPorId(int id)throws Exception{  
+ 40  +        Nomina n=new Nomina();  
+ 41  +        nominas = leeTodo();  
+ 42  +        n=nominas.get(id);  
+ 43  +        return n;  
+ 44  +    }  
+ 45  +  
+ 46  +}  
